@@ -9,10 +9,13 @@
     <link th:href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" />
     <link th:href="@{/css/main.css}" rel="stylesheet" />
   </head>
-  <body ng-app="toast">
+  <body ng-app="toast" ng-controller="HomeController">
     <div class="container">
       <div>
-        <h1>Call /broadcast/{argument} to broadcast to all logged in users.</h1>
+        <h1>Internally calls /broadcast/{argument} to broadcast to all logged in users.</h1>
+        <h2>You can also send a message by explicitly visiting /broadcast/{argument} </h2>
+        <input type ="text" ng-model="lastmessage"/>
+        <button ng-click="processit()">Send</button>
         <div ng-view></div>
       </div>
     </div>

@@ -13,4 +13,7 @@ Clean setup of a spring boot application with embedded Tomcat 8 with websocket a
 
 Run `mvn` to build the `jar` and `java -jar toast-on-atmosphere-x.x.x-SNAPSHOT.jar` to run the server on `localhost:8080`. To broadcast to all logged in clients GET `localhost:8080/broadcast/MyMessage`. To log out GET `localhost:8080/logout`.
 
+The code now has "spring-boot-devtools" support. This requires 1.3 or above spring-boot framework.
+If you intend to tweak the code, it might be more suitable to launch the app via "mvn spring-boot:run". After changing code, files via any editor, you can run run "mvn compile" from another window to refresh the app.
+
 ![Login](http://andreaskluth.net/assets/2014-07-13%2017.31.15.png)
